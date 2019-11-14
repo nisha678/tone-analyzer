@@ -1,0 +1,74 @@
+{
+  "name": "@ibm-watson/tone-analyzer-nodejs",
+  "private": true,
+  "version": "4.0.0",
+  "description": "Web application that uses Tone Analyzer to get the tone from a text message",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watson-developer-cloud/tone-analyzer-nodejs.git"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "author": "IBM Corp.",
+  "contributors": [
+    {
+      "name": "James Zhang",
+      "email": "jzhang300@us.ibm.com"
+    },
+    {
+      "name": "Eva Xiaohui Luo",
+      "email": "evaluo_xhl@us.ibm.com"
+    },
+    {
+      "name": "German Attanasio Ruiz",
+      "email": "germanatt@us.ibm.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/watson-developer-cloud/tone-analyzer-nodejs/issues"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "npm run lint && npm run test-jest",
+    "test-jest": "jest test",
+    "lint": "eslint .",
+    "autofix": "eslint --fix .",
+    "codecov": "npm run test && (codecov || true)"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.0.0",
+    "express-secure-only": "^0.2.1",
+    "helmet": "^3.21.2",
+    "i18n": "^0.8.4",
+    "ibm-watson": "^5.1.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.5",
+    "@semantic-release/commit-analyzer": "^6.3.3",
+    "@semantic-release/git": "^7.0.18",
+    "@semantic-release/github": "^5.5.5",
+    "@semantic-release/npm": "^5.3.4",
+    "@semantic-release/release-notes-generator": "^7.3.2",
+    "codecov": "^3.6.1",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0",
+    "semantic-release": "^15.13.30",
+    "semantic-release-docker": "^2.2.0",
+    "supertest": "^4.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "testEnvironment": "node"
+  }
+}
